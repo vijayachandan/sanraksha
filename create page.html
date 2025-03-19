@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, p, input, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .confirmation-message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Create Account</h1>
+    </header>
+
+    <div class="container">
+        <h2>Fill in Your Details</h2>
+        <form id="registration-form">
+            <input type="text" name="first_name" placeholder="First Name" required><br>
+            <input type="text" name="last_name" placeholder="Last Name" required><br>
+            <input type="text" name="aadhar_number" placeholder="Aadhar Number" required><br>
+            <input type="text" name="address" placeholder="Address" required><br>
+            <input type="text" name="mobile_number" placeholder="Mobile Number" required><br>
+            <input type="email" name="gmail" placeholder="Gmail" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <button type="submit">Create Account</button>
+        </form>
+        
+        <div class="confirmation-message" id="confirmation-message">
+            Your ID is created.
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle form submission and redirection
+        document.addEventListener('DOMContentLoaded', function () {
+            const registrationForm = document.getElementById('registration-form');
+            const confirmationMessage = document.getElementById('confirmation-message');
+
+            registrationForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+
+                // Simulate form submission (replace this with actual server-side processing)
+                // For demonstration purposes, we'll simply show the confirmation message.
+                confirmationMessage.style.display = 'block';
+
+                // Redirect to a new page after a short delay
+                setTimeout(function() {
+                    window.location.href = 'file:///C:/Users/vijay/OneDrive/Desktop/html%20learning/home%20page.html'; // Change this to your desired page URL
+                }, 2000); // Delay of 2 seconds
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HEALTH</title>
+  <style>
+    body {
+      background-color: powderblue;
+      background-image: url('images.jpeg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      height: 100vh;/*   */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative; /* Required for absolute positioning of the image button */
+    }
+
+    .header {
+      font-size: 35px;
+      color: rgb(15, 14, 14);
+      margin-bottom: 20px;
+    }
+
+    .start {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    button {
+      padding: 10px 30px;
+      font-size: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #97c1ee;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .image-button {
+      position: absolute;
+      top: 20px; /* Adjust to move the image down */
+      right: 20px; /* Adjust to move the image left */
+    }
+
+    .image-button img {
+      width: 200px; /* Adjust the size of the image */
+      height: auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Image button at the top right -->
+  <a href="https://www.google.com/maps/search/hospitals+near+me/@17.3485316,78.377464,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" class="image-button">
+    <img src="C:\Users\vijay\OneDrive\Desktop\html learning\maps photo.jpg" alt="Redirect Button">
+  </a>
+
+  <div>
+    <div class="header">
+      <h2>HEALTH</h2>
+    </div>
+
+    <div class="start">
+      <button><b><i><a href="file:///C:/Users/vijay/OneDrive/Desktop/html%20learning/emergency%20button.html">EMERGENCY!!!</a></i></b></button>
+        <button><b><i><a href="file:///C:/Users/vijay/OneDrive/Desktop/html%20learning/HELP%20PAGE.html">Help</a></i></b></button>
+     <button><b><i><a href="like a map for hospitals">OTHERS</a></i></b></button> 
+      <button><b><i><a href="file:///C:/Users/vijay/OneDrive/Desktop/html%20learning/web%20login%20page.html">Get Started</a></i></b></button>
+    
+    </div>
+  </div>
+</body>
+</html>

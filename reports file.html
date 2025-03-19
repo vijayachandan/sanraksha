@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <!-- Add your CSS stylesheets or external libraries here -->
+    <!-- Example: <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        /* Add your CSS styles here */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        /* File upload form style */
+        .file-upload-form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reports</h1>
+        <!-- You can add navigation links or other header content here -->
+    </header>
+
+
+    <div class="container file-upload-form">
+        <h2>Options</h2>
+        <button onclick="openFile()">Open a File</button>
+        <button onclick="toggleUploadForm()">Upload a File</button>
+        
+        <!-- File upload form (initially hidden) -->
+        <form id="uploadForm" action="upload.php" method="POST" enctype="multipart/form-data" style="display: none;">
+            <input type="file" name="file" accept=".pdf, .doc, .docx"><br>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+
+    <script>
+        // JavaScript to toggle the file upload form
+        function toggleUploadForm() {
+            const uploadForm = document.getElementById('uploadForm');
+            if (uploadForm.style.display === 'none') {
+                uploadForm.style.display = 'block';
+            } else {
+                uploadForm.style.display = 'none';
+            }
+        }
+
+        // JavaScript function to open a file (you can customize this)
+        function openFile() {
+            alert('Implement your file opening logic here.');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Health Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .emergency-info {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .emergency-info p {
+            margin: 5px 0;
+        }
+
+        .emergency-info button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .emergency-info button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Emergency Health Information</h2>
+    
+    <!-- Heart Attack Information -->
+    <div class="emergency-info">
+        <button onclick="toggleContent('heart-attack')">Heart Attack</button>
+        <div id="heart-attack" style="display: none;">
+            <p><strong>Symptoms:</strong> Chest pain, shortness of breath, sweating, nausea, etc.</p>
+            <p><strong>Actions:</strong> Call emergency services immediately (911 or your local number), chew aspirin if not allergic, keep calm, and stay seated.</p>
+        </div>
+    </div>
+
+    <!-- Stroke Information -->
+    <div class="emergency-info">
+        <button onclick="toggleContent('stroke')">Stroke</button>
+        <div id="stroke" style="display: none;">
+            <p><strong>Symptoms:</strong> Face drooping, arm weakness, speech difficulty.</p>
+            <p><strong>Actions:</strong> Call emergency services immediately (911 or your local number), note the time when symptoms started, stay with the person until help arrives.</p>
+        </div>
+    </div>
+
+    <!-- Additional Emergency Situations -->
+    <div class="emergency-info">
+        <button onclick="toggleContent('allergic-reaction')">Severe Allergic Reaction</button>
+        <div id="allergic-reaction" style="display: none;">
+            <p><strong>Symptoms:</strong> Difficulty breathing, swelling of the face/lips, hives, dizziness.</p>
+            <p><strong>Actions:</strong> Use an epinephrine auto-injector if available, call emergency services (911 or your local number) immediately.</p>
+        </div>
+    </div>
+
+    <!-- Emergency Contact Numbers -->
+    <div class="emergency-info">
+        <button onclick="toggleContent('emergency-contacts')">Emergency Contact Numbers</button>
+        <div id="emergency-contacts" style="display: none;">
+            <p><strong>Inida:</strong> 108</p>
+            <p><strong>United Kingdom:</strong> 999</p>
+            <p><strong>Canada:</strong> 911</p>
+            <p><strong>Australia:</strong> 000</p>
+            <!-- Add more countries as needed -->
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === 'none') {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
